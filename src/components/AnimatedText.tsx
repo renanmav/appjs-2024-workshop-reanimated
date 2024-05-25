@@ -23,19 +23,19 @@ export function AnimatedText({
 }: {
   style?: StyleProp<AnimatedStyle<StyleProp<TextStyle>>>;
   label?: string;
-  text: SharedValue<number>;
+  text: SharedValue<any>;
 }): React.ReactElement {
   const animatedProps = useAnimatedProps(() => {
     return {
-      text: `${label}${text.value.toFixed(1)}`,
+      text: `${label}${text.value}`,
     } as unknown as TextInputProps;
   });
 
   return (
     <AnimatedTextInput
-      underlineColorAndroid='transparent'
+      underlineColorAndroid="transparent"
       editable={false}
-      value={`${label}${text.value.toFixed(1)}`}
+      value={`${label}${text.value}`}
       style={[styles.text, style]}
       animatedProps={animatedProps}
     />

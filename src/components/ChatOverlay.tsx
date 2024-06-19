@@ -18,7 +18,7 @@ export function Overlay() {
 
 const styles = StyleSheet.create({
   overlay: {
-    // @ts-ignore its fine
-    ...StyleSheet.absoluteFill,
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 0,
   },
 });

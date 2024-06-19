@@ -7,7 +7,6 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Chat } from "@/components/Chat";
 import { Footer } from "@/components/ChatFooter";
 import { Header } from "@/components/ChatHeader";
-import { Overlay } from "@/components/ChatOverlay";
 import { ChatProvider } from "@/components/ChatProvider";
 
 export function EmojiStagger() {
@@ -19,7 +18,6 @@ export function EmojiStagger() {
           <Chat />
           <Footer />
         </SafeAreaProvider>
-        <Overlay />
       </ChatProvider>
     </GestureHandlerRootView>
   );
@@ -31,4 +29,3 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F9FF",
   },
 });
-

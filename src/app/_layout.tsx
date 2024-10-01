@@ -8,9 +8,14 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Stack
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
         }}
-      />
+      >
+        <Stack.Screen
+          name="index"
+          options={{ headerShown: false, title: "" }}
+        />
+      </Stack>
     </GestureHandlerRootView>
   );
 }

@@ -12,8 +12,9 @@ export default function HomeScreen() {
         {routes.map((route) => (
           <TouchableOpacity
             onPress={() => router.navigate(route.href)}
-            key={route.href}
-            style={styles.button}>
+            key={route.href as string}
+            style={styles.button}
+          >
             <Text style={styles.title}>{route.title}</Text>
             <Text style={styles.subtitle}>{route.subtitle}</Text>
           </TouchableOpacity>
